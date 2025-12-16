@@ -1,0 +1,18 @@
+Day-3 | Virtual Machines Part-1
+
+What is a server?
+An independent machine allocated and configured storage,memory,cpu specifically to host an application/service which can be either physical or virtual.
+
+Physical vs virtual servers
+Physical servers are standalone -dedicated hardware machines hosted at data centres which has own os, memory and storage
+Virtual servers are softwares which allows creating multiple virtual servers using hypervisors like xen,vmware
+
+example:
+My laptop has 100 gb space
+using hypervisor, did logical seperation into two vm's -50 gb each
+
+How to create an Vm?
+Using hypervisor or cloud -ec2 instance
+
+Virtualisation
+A logical isolation of physical server to vm's for improving the efficiency.
