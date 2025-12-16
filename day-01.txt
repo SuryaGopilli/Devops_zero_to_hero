@@ -1,0 +1,24 @@
+Day-1 | Fundamentals of DevOps
+
+What is devops?
+
+Devops is a culture, which improves the organisation ability to delivery the application quickly
+How it delivers the application quickly?
+It delivers the application using automation and ensuring quality, monitoring, testing in place
+->Devops is a process of improving the delivery of an application through automation ensuring relaiblity and observability is in place
+Definition: Devops is a culture, with set of principles which enforces collaboration between ops and dev team. It focus on faster, secure and reliable delivery of an application
+- by following the principles of ci/cd through automation, testing and observability.
+
+Why devops?
+
+Earlier- to deploy an applicaton from code to customer we have 3 different roles
+sys admins -> maintains servers through hypervisors like xen, vmware
+server admins -> creates an application server for application so that testing engineers will test the application
+build and release engineer -> deploys the code to staging/preprod/production level
+developer - pushes code to cvn(centralised version control) like svn
+So devops is a culture, a way of working - which improves the delivery efficiency.
+
+How to introduce yourself as a devops?
+
+Introduce ur background as a sys/build/release engineer so that u already have an experience.
+Explain your roles and responsibilities -like what u have done and what does ur day to day activity.
