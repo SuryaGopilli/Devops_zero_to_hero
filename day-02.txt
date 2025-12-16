@@ -1,0 +1,14 @@
+Day-2 | Improve SDLC with DevOps
+
+What is SDLC?
+  
+Software Development life cycle - To deliver an high quality product
+SDLC : Planning -> Defining -> Designing -> Building -> Testing -> Deployment -> Monitoring
+Example: KIds section in amazon/flipkart
+Planning : Soe/ceo's ->product owners gather the info with regards the necessity
+Defining : Product owners prepare the docs of all the requirements they gathered, like this much people are interested and this is how it'll benifit our company
+Designing : Architect designs HLD and LLD designs for how the application going to function in order with scalability and performance
+Building : source code is being written - pushes to git
+Testing : Quality Engineers are responsible for testing the application
+Deployment : Devops/ops enginers will deploy the application
+Monitoring : SRE's will focus on observability of the application
