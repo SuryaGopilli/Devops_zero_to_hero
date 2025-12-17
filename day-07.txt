@@ -1,0 +1,40 @@
+Day-7 | Live AWS Project using SHELL SCRIPTING for DevOps
+
+Aws resource utilisation monitoring : why we need it? organisations shifted to cloud for easier management and cost effectiveness, they need to know how much resources are using.
+Every day at certain time we need to update the usage of these resources in scheduling monitor
+we can achieve this by using cronjob
+
+To complete this project we need
+1. install aws cli
+2. configure aws cli using aws configure 
+3. create and write script - aws cli command reference //https://docs.aws.amazon.com/cli/latest/reference/#cli-aws
+4. grant execute permissions to script.sh file - chmod +x script.sh
+5. scheudle a cronjob
+  
+vim Script.sh
+----------------
+#!/bin/bash
+# Aws resource usage list for lambda ec2 and s3 buckets
+echo "EC2 instance usage"
+aws ec2 describe-instances | jq '.Reservations[].Instances[].InstanceId'  //jq is an json parser used to parse a specific content from the json file, likewise we have yq for yaml files.
+echo "s3 buckets usage"
+aws s3 ls
+echo "lambda functions usage"
+aws lambda list-functions
+
+
+cronjob -e
+35 0 * * *  sh /home/surya/Script.sh > /home/surya/cronjob.log
+35 0 * * * echo "cron job executed at 12:35 AM" >> /home/surya/cronjob.log
+
+cronjob
+-----------
+crontab -e //to create or to edit the tab
+crontab -l //to list the crontabs
+systemctl status crond //to check crontab status
+syntax:
+* * * * *  inputcommand redirection filename
+M H D M W  //M -minute(0-59) | H - hour(1-23) | D - Day(1-31) | M -Month(1-12) | W -week(0-6) 0-sun,1-mon,2-tue....
+example: current time is 12:33 AM to schedule a cronjob to run at 12:35 the syntax will be
+35 0 * * * echo "Now time is 12:35 AM" > /home/surya/time.txt
+note: if u want to schedule another job u need to do it in same file crontab -e
