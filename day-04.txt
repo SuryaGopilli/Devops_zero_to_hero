@@ -1,0 +1,8 @@
+Day-4 | AWS & Azure - How to Create Virtual Machines
+  
+How to create Vm's?
+
+Ui : You log in to AWS Console (browser).You click Launch Instance.The console calls AWS EC2 APIs on your behalf.vaidates your request and EC2 instance is created.
+Script: Write a script or config.Send a request directly to AWS APIs.AWS validates, authenticates and authorises + creates the instance.
+we can communicate each service thorugh an api request
+we can achieve this by using cloud specific script tools like aws cli, api, cdk, cft. terraform is an non proprietary opensource tool.
