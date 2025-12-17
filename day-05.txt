@@ -1,0 +1,21 @@
+Day-5 | AWS CLI Full Guide
+
+How to create and connect to ec2 insatnce?
+AWS UI : Using Ec2 service in aws and connect through aws web browser | Through ssh using keys ssh -i privtekey username@pubipadd
+AWS CLI : 
+  Create an access key in aws profile -> security credentials -> secret access keys
+  Download aws cli from web broswer
+  In personal laptop terminal give -> aws configure , it'll ask to enter aws access keys -> configured
+  You are connected to aws through cli, ex: list the current ec2 instances ec2 describe
+  Example: https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2/service-resource/create_instances.html
+Aws CFT : 
+  using cft templates available in github(below reference) we can create the istances
+
+
+AWS CLI Download: https://aws.amazon.com/cli/
+
+AWS CLI Command Reference: https://docs.aws.amazon.com/cli/latest/userguide/cli-services-ec2-instances.html
+
+AWS Cloud Formation Templates Examples: https://github.com/aws-cloudformation/aws-cloudformation-templates
+
+AWS Python Boto3 Example:https://gist.github.com/mda590/679aba60ca03699d5b12a32314debdc0
