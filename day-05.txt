@@ -8,7 +8,7 @@ AWS CLI :
   In personal laptop terminal give -> aws configure , it'll ask to enter aws access keys -> configured
   You are connected to aws through cli, ex: list the current ec2 instances ec2 describe
   Example: https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ec2/service-resource/create_instances.html
-Aws CFT : 
+Aws CFT : Explained in depth under IAC (infrastructure as code)
   using cft templates available in github(below reference) we can create the istances
 
 
