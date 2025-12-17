@@ -1,0 +1,22 @@
+Day-6 | Linux & Shell Scripting
+
+What is Operating system and why we use it?
+System has both hardware and software - OS is responsible for communication between two and process user input with hardware
+OS -> kernel is heart of os which manages 4 major functions 1) device management 2) memory management 3) process management 4) filesystem handling
+
+---------------------------------
+  compiler |   system softwares
+---------------------------------
+          systemlibraries
+---------------------------------
+            KERNEL
+---------------------------------
+            HARDWARE
+---------------------------------- 
+Why linux?
+fastest, light weight -no gui, free, open source.
+
+Shell scripting commands basic
+free -gh (memory usage)
+nproc (no of cpu's)
+df -h (disk space available)
