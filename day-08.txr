@@ -1,0 +1,41 @@
+Day-8 | DevOps Zero to Hero | Shell Scripting Project Used In Real Time | GitHub API Integration
+  
+What is an Api?
+API - Application programming interface : It allows communication between two computers/systems using api requests
+Api's has methods like http rest api -it basically fetches and provides the info in json format
+analogy: ingredients(db) chef(api server) waiter(api) user(client)
+user requests an item through waiter -> waiter tells to chef -> chef checks and creates the order and passes back to waiter -> waiter serves to user
+We need to create and allow an api while writing code for scpecific functions: so using different modules an request can be made and allows for fetching
+To talk to an application we have two methods : thorugh CLI and thorugh API
+
+Abhishek Projeect URL - https://github.com/iam-veeramalla/shell-scripting-projects/blob/main/github-api/list-users.sh
+PROJECT -LIST COllABORATORS/USERS FOR REPO IN GITHUB
+#!/bin/bash
+##############
+#export varibles for login username and token
+#arg variables to provide the user and repo names
+#github url
+#call args and assign it to another varibles
+
+GITHUB="https://api.github.com" # assigns the url path to variable github 
+USER_NAME=$username #username is exported at runtime
+TOKEN=$token  #classic token is exported at runtime
+USERNAME=$1  #username of github user
+REPONAME=$2  #repo name
+
+URL_PATH="${GITHUB}/repos/${USERNAME}/${REPONAME}/collaborators" # assigning the api url command path to url_path
+#why we use "" for usernme and token here is sometimes token ontains abc:def@123 and when curl sees it found curl -s -u user:abc:def@123
+# these are two seperate ones, so it fails instead using "" will treat as single arg
+FILE=$(curl -s -u "${USER_NAME}:${TOKEN}" "${URL_PATH}")  # using curl to download the info using github api url
+PARSE=$(echo "$FILE" | jq -r '.[] | select(.permissions.pull == true) | .login') # echoing/ printing the output of api request using curl command along with parsing the resulted output
+#parse will contain the list of users
+if [[ -z "$PARSE" ]]; then
+echo "No users with read access found for ${USERNAME}/${REPONAME}."
+else
+    echo "Users with read access to ${USERNAME}/${REPONAME}:"
+    echo "$PARSE"
+fi
+
+################
+#add http status code
+#add failure echo on how to call args
