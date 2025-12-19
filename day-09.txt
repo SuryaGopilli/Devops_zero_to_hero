@@ -1,0 +1,32 @@
+Day-9 | Git and GitHub | What is GIT ? | What is Version Control ?
+
+Why we use git?
+For easier sharing, versioning of code
+sharing: In order to share our code -in organisation level its difficult to do it without a proper tracking system
+Versioning: If we dont have versions of our code, its difficult to rollback to specific version of our code.
+example analogy: surya(dev1) teja(dev2) is working on features calculator-a and calculator-b, both did their subsequent changes and pushed their code to git and
+each given with additional features to work upon and pick the functionality from each others ealier code, 
+  later after 1 week organisation decided not to go with those additional features. now git will help us in sharing and versioning easier here.
+Both pushed their earlier code to the git with commit id's and now to work upon new feature they can pick the functionality from git and 
+  to roll back they can use the commit id of that particular change and can go back.
+
+Centralised vs Distributed system
+Centralised - has only single central server to store and communicate with the code
+Distributed - has the functionality to create the copies of our code in our local and remote machines. using fork functionality.ex: git server, github,gitlab
+
+Git Fork vs clone?
+Fork : forking repo- creating idividual copy of code to our repo
+Clone : Downloading repo to our local machine
+
+Git : install through git-scm url
+git init //to initialise the git repo in local machine it'll add a .git folder where it was intialised
+cd .git //tracks the changes in files thorugh objects/ folder in .git folder; has different folders/components each tracks the diff functionality;
+// HEAD  config  description  hooks/  info/  objects/  refs/
+git add <filename> ; git commit -m "<commitmsg>" ; git push origin <branchname> //git lifecycle
+git add . //add file to staging area
+git commit -m //commiting is the *versioning* of stage
+git push origin // pushing the changes to repo  - if no repo is created in github and created file thorugh cli; then u can use git add remote "remoterepolink" and git remote -v
+git log // shows the commit msgswith commit id
+git diff //shows the difference in file currently working on
+git status //to know whether our changes are in staging or not
+git rest --hard commitid // to rest and go back to earlier stage
