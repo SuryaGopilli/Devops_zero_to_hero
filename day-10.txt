@@ -1,0 +1,19 @@
+Day-10 | Git Branching Strategy
+
+What is a branch?
+A seperate snapshot to work on any specific functionality and test it without disturbing the main code
+
+Master/Main -> feature branch -> release branch -> hotfix branch
+
+Main branch
+O
+O
+O -> O (fetaure branch) // takes the snapshot of current main branch and on top of it adds the additonal functionality and tests it. git checkout -b featurebranch name
+O    O
+O    O
+O <- O //merges back the feature branch functionalities after tested and got approval for merge
+O 
+O -> O (Release branch) // creates release for prod release same like feature branch and after all fucntionality tests merges back to main
+O <- O //release branch merges back
+O -> O (Hotfix branch) // hotfix branch for issues related to deployment ; short lived specific for deployment
+O -> O //merges back hotfix branch
